@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Now you could search via `input field` OR post search string after `"/"` in URL lake this `http://localhost:3000/as`
+
 ## Available Scripts
 
 In the project directory, you can run:
