@@ -4,6 +4,13 @@ import { bindActionCreators } from 'redux';
 import { changeSearchString } from '../actions/index';
 
 class UserSearch extends Component {
+  constructor(props) {
+    super(props);
+    if (props.searchLink) {
+      console.log('Search from link:', props.searchLink);
+      props.changeSearchString(props.searchLink);
+    }
+  }
   render() {
     return (
       <div>

@@ -5,10 +5,14 @@ import { store } from './store/configureStore';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <Route exact path="/" component={App}></Route>
+      <Route path="/:searchString" component={App}></Route>
+    </Router>
   </Provider>,
   document.getElementById('root'),
 );

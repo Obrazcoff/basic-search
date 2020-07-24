@@ -4,11 +4,11 @@ import UsersList from './containers/user-list';
 import UserSearch from './containers/user-search';
 import UserDetails from './containers/user-details';
 
-function App() {
+function App(props) {
   return (
     <div className="app">
       <div className="left_side">
-        <UserSearch />
+        <UserSearch searchLink={props.match.params.searchString} />
       </div>
       <div className="main">
         <div className="content">
