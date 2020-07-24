@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import UsersList from './containers/user-list';
+import UserSearch from './containers/user-search';
+import UserDetails from './containers/user-details';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="left_side">
+        <UserSearch />
+      </div>
+      <div className="main">
+        <div className="content">
+          <h2>Users list:</h2>
+          <UsersList />
+        </div>
+      </div>
+
+      <div className="right_side">
+        <h3>User Details:</h3>
+        <UserDetails key={Math.random()} />
+      </div>
     </div>
   );
 }
